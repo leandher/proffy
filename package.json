@@ -1,0 +1,17 @@
+{
+  "name": "proffy",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Leandher <leandher_bessa@hotmail.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/shared/*"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
