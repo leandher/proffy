@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Input from '../../components/Input';
 import Select from '../../components/Select';
@@ -18,6 +19,8 @@ const TeacherForm: React.FC = () => {
 
   const [subject, setSubject] = useState('');
   const [cost, setCost] = useState('');
+
+  const history = useHistory();
 
   const [scheduleItems, setScheduleItems] = useState([
     { week_day: 0, from: '', to: '' },
@@ -58,6 +61,8 @@ const TeacherForm: React.FC = () => {
       });
 
       alert('Cadastro realizado com sucesso!');
+
+      history.push('/');
     } catch (error) {
       alert('Erro no cadastro!');
     }
