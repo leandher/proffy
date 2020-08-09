@@ -1,0 +1,9 @@
+# Prisma Migrate lockfile v1
+
+20200808184917-create-db
+20200808202358-add-email-field
+20200808210452-password
+20200808210744-lastname
+20200809021643-optional-fields
+20200809161219-naming
+20200809170848-default-now
