@@ -10,6 +10,9 @@ module.exports = {
   },
   collectCoverage: true,
   coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    '<rootDir>/src/modules/**/useCases/**/*UseCase.ts',
+  ],
   testEnvironment: 'node',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
   preset: 'ts-jest',
