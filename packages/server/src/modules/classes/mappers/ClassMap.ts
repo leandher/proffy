@@ -1,3 +1,4 @@
+import { UserMap } from '@modules/users/mappers/UserMap';
 import {
   ClassCreateInput,
   Class as ClassPersistence,
@@ -6,9 +7,8 @@ import {
 } from '@prisma/client';
 
 import { Class } from '../domain/Class';
-import { UserMap } from '@modules/users/mappers/UserMap';
 
-interface ClassQuery extends Omit<ClassPersistence, "user_id"> {
+interface ClassQuery extends Omit<ClassPersistence, 'user_id'> {
   user: UserPersistence;
   schedules: SchedulePersistence[];
 }

@@ -1,6 +1,7 @@
 import { IClassRepository } from '@modules/classes/repositories/IClassRepository';
-import { IFilterDTO } from './IFilterDTO';
 import convertHourToMinutes from '@utils/convertHourToMinutes';
+
+import { IFilterDTO } from './IFilterDTO';
 
 export class FindClassesUseCase {
   constructor(private classRepository: IClassRepository) {}

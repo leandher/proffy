@@ -5,11 +5,7 @@ import { CreateConnectionUseCase } from './CreateConnectionUseCase';
 
 const prismaConnectionRepository = new PrismaConnectionRepository();
 
-const createConnectionUseCase = new CreateConnectionUseCase(
-  prismaConnectionRepository
-);
-const createConnectionController = new CreateConnectionController(
-  createConnectionUseCase
-);
+const createConnectionUseCase = new CreateConnectionUseCase(prismaConnectionRepository);
+const createConnectionController = new CreateConnectionController(createConnectionUseCase);
 
 export { createConnectionUseCase, createConnectionController };

@@ -11,7 +11,7 @@ export class UserMap {
         whatsapp: raw.whatsapp || undefined,
         bio: raw.bio || undefined,
       },
-      raw.id
+      raw.id,
     );
 
     return user;

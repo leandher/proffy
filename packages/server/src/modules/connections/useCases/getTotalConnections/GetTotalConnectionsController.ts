@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 import { GetTotalConnectionsUseCase } from './GetTotalConnectionsUseCase';
 
 export class GetTotalConnectionsController {

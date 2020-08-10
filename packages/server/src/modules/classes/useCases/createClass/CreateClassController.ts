@@ -9,13 +9,16 @@ export class CreateClassController {
     const { user_id, subject, cost, schedule } = request.body;
 
     try {
-      this.createClassUseCase.execute({ subject, userId: user_id, cost, schedule });
+      this.createClassUseCase.execute({
+        subject,
+        userId: user_id,
+        cost,
+        schedule,
+      });
 
       return response.sendStatus(201);
     } catch (error) {
-      return response
-        .status(400)
-        .json({ message: 'Unexpected error while creating new class' });
+      return response.status(400).json({ message: 'Unexpected error while creating new class' });
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 import { CreateConnectionUseCase } from './CreateConnectionUseCase';
 
 export class CreateConnectionController {

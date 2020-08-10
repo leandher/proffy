@@ -1,5 +1,6 @@
-import { FindClassesUseCase } from './FindClassesUseCase';
 import { Request, Response } from 'express';
+
+import { FindClassesUseCase } from './FindClassesUseCase';
 
 export class FindClassesController {
   constructor(private findClassesUseCase: FindClassesUseCase) {}

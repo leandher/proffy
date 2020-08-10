@@ -5,11 +5,7 @@ import { GetTotalConnectionsUseCase } from './GetTotalConnectionsUseCase';
 
 const prismaConnectionRepository = new PrismaConnectionRepository();
 
-const getTotalConnectionsUseCase = new GetTotalConnectionsUseCase(
-  prismaConnectionRepository
-);
-const getTotalConnectionsController = new GetTotalConnectionsController(
-  getTotalConnectionsUseCase
-);
+const getTotalConnectionsUseCase = new GetTotalConnectionsUseCase(prismaConnectionRepository);
+const getTotalConnectionsController = new GetTotalConnectionsController(getTotalConnectionsUseCase);
 
 export { getTotalConnectionsUseCase, getTotalConnectionsController };

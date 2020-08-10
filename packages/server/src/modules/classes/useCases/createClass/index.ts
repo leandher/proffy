@@ -1,7 +1,7 @@
 import { PrismaClassRepository } from '@modules/classes/infra/prisma/PrismaClassRepository';
 
-import { CreateClassUseCase } from './CreateClassUseCase';
 import { CreateClassController } from './CreateClassController';
+import { CreateClassUseCase } from './CreateClassUseCase';
 
 const prismaClassRepository = new PrismaClassRepository();
 

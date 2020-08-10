@@ -1,14 +1,10 @@
 import { prisma } from '@infra/prisma/client';
-import { IClassRepository } from '@modules/classes/repositories/IClassRepository';
 import { Class } from '@modules/classes/domain/Class';
 import { ClassMap } from '@modules/classes/mappers/ClassMap';
+import { IClassRepository } from '@modules/classes/repositories/IClassRepository';
 
 export class PrismaClassRepository implements IClassRepository {
-  async filter(
-    subject: string,
-    week_day: number,
-    timeInMinutes: number
-  ): Promise<Class[]> {
+  async filter(subject: string, week_day: number, timeInMinutes: number): Promise<Class[]> {
     const raw = await prisma.class.findMany({
       where: {
         subject: {
@@ -34,9 +30,8 @@ export class PrismaClassRepository implements IClassRepository {
       },
     });
 
-    
     const classes = raw.map((rawClass) => ClassMap.toDomain(rawClass));
-    
+
     console.log(classes);
 
     return classes;

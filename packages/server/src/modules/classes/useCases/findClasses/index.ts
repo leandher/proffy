@@ -1,7 +1,7 @@
 import { PrismaClassRepository } from '@modules/classes/infra/prisma/PrismaClassRepository';
 
-import { FindClassesUseCase } from './FindClassesUseCase';
 import { FindClassesController } from './FindClassesController';
+import { FindClassesUseCase } from './FindClassesUseCase';
 
 const prismaClassRepository = new PrismaClassRepository();
 

@@ -1,7 +1,7 @@
 import { prisma } from '@infra/prisma/client';
-import { IUserRepository } from '@modules/users/repositories/IUserRepository';
 import { User } from '@modules/users/domain/User';
 import { UserMap } from '@modules/users/mappers/UserMap';
+import { IUserRepository } from '@modules/users/repositories/IUserRepository';
 
 export class PrismaUserRepository implements IUserRepository {
   async findByEmail(email: string): Promise<User | null> {

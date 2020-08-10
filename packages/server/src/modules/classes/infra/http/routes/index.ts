@@ -5,12 +5,8 @@ import { findClassesController } from '@modules/classes/useCases/findClasses';
 
 const classRouter = express.Router();
 
-classRouter.get('/', (request, response) =>
-  findClassesController.handle(request, response)
-);
+classRouter.get('/', (request, response) => findClassesController.handle(request, response));
 
-classRouter.post('/', (request, response) =>
-  createClassController.handle(request, response)
-);
+classRouter.post('/', (request, response) => createClassController.handle(request, response));
 
 export default classRouter;
