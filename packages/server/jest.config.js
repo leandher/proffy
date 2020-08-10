@@ -11,8 +11,6 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: "<rootDir>" }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
   preset: 'ts-jest',
-  testEnvironment: 'node',
-  moduleFileExtensions: ['js', 'ts'],
 };

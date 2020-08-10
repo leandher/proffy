@@ -9,14 +9,14 @@ export class CreateUserController {
     const { name, email, password, lastName } = request.body;
 
     try {
-      await this.createUserUseCase.execute({
+      const user = await this.createUserUseCase.execute({
         name,
         email,
         lastName,
         password,
       });
 
-      return response.status(201).send();
+      return response.status(201).json(user);
     } catch (err) {
       return response.status(400).json({
         message: err.message || 'Unexpected error while creating user!',

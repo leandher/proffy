@@ -2116,6 +2116,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bcryptjs@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/bcryptjs/-/bcryptjs-2.4.2.tgz#e3530eac9dd136bfdfb0e43df2c4c5ce1f77dfae"
+  integrity sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==
+
 "@types/body-parser@*":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
@@ -2219,6 +2224,14 @@
   dependencies:
     jest-diff "^24.3.0"
 
+"@types/jest@^26.0.9":
+  version "26.0.9"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.9.tgz#0543b57da5f0cd949c5f423a00c56c492289c989"
+  integrity sha512-k4qFfJ5AUKrWok5KYXp2EPm89b0P/KZpl7Vg4XuOTVVQEhLDBDBU3iBFrjjdgd8fLw96aAtmnwhXHl63bWeBQQ==
+  dependencies:
+    jest-diff "^25.2.1"
+    pretty-format "^25.2.1"
+
 "@types/json-schema@^7.0.3", "@types/json-schema@^7.0.4":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.5.tgz#dcce4430e64b443ba8945f0290fb564ad5bac6dd"
@@ -2228,6 +2241,13 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+
+"@types/jsonwebtoken@^8.5.0":
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.5.0.tgz#2531d5e300803aa63279b232c014acf780c981c5"
+  integrity sha512-9bVao7LvyorRGZCw0VmH/dr7Og+NdjYSsKAxB43OQoComFbBgsEpoR9JW6+qSq/ogwVBg8GI2MfAlk4SYI4OLg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/mime@*":
   version "2.0.3"
@@ -5189,6 +5209,11 @@ diff-sequences@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"
   integrity sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==
+
+diff-sequences@^25.2.6:
+  version "25.2.6"
+  resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-25.2.6.tgz#5f467c00edd35352b7bca46d7927d60e687a76dd"
+  integrity sha512-Hq8o7+6GaZeoFjtpgvRBUknSXNeJiCx7V9Fr94ZMljNiCr9n9L8H8aJqgWOQiDDGdyn29fRNcDdRVJ5fdyihfg==
 
 diff-sequences@^26.0.0:
   version "26.0.0"
@@ -8361,6 +8386,16 @@ jest-diff@^24.0.0, jest-diff@^24.3.0, jest-diff@^24.9.0:
     jest-get-type "^24.9.0"
     pretty-format "^24.9.0"
 
+jest-diff@^25.2.1:
+  version "25.5.0"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-25.5.0.tgz#1dd26ed64f96667c068cef026b677dfa01afcfa9"
+  integrity sha512-z1kygetuPiREYdNIumRpAHY6RXiGmp70YHptjdaxTWGmA085W3iCnXNx0DhflK3vwrKmrRWyY1wUpkPMVxMK7A==
+  dependencies:
+    chalk "^3.0.0"
+    diff-sequences "^25.2.6"
+    jest-get-type "^25.2.6"
+    pretty-format "^25.5.0"
+
 jest-diff@^26.2.0:
   version "26.2.0"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-26.2.0.tgz#dee62c771adbb23ae585f3f1bd289a6e8ef4f298"
@@ -8471,6 +8506,11 @@ jest-get-type@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.9.0.tgz#1684a0c8a50f2e4901b6644ae861f579eed2ef0e"
   integrity sha512-lUseMzAley4LhIcpSP9Jf+fTrQ4a1yHQwLNeeVa2cEmbCGeoZAtYPOIv8JaxLD/sUpKxetKGP+gsHl8f8TSj8Q==
+
+jest-get-type@^25.2.6:
+  version "25.2.6"
+  resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-25.2.6.tgz#0b0a32fab8908b44d508be81681487dbabb8d877"
+  integrity sha512-DxjtyzOHjObRM+sM1knti6or+eOgcGU4xVSb2HNP1TqO4ahsT+rqZg+nyqHWJSvWgKC5cG3QjGFBqxLghiF/Ig==
 
 jest-get-type@^26.0.0:
   version "26.0.0"
@@ -12356,7 +12396,7 @@ pretty-format@^24.0.0, pretty-format@^24.3.0, pretty-format@^24.7.0, pretty-form
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
-pretty-format@^25.1.0, pretty-format@^25.2.0, pretty-format@^25.5.0:
+pretty-format@^25.1.0, pretty-format@^25.2.0, pretty-format@^25.2.1, pretty-format@^25.5.0:
   version "25.5.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-25.5.0.tgz#7873c1d774f682c34b8d48b6743a2bf2ac55791a"
   integrity sha512-kbo/kq2LQ/A/is0PQwsEHM7Ca6//bGPPvU6UnsdDRSKTWxT/ru/xb88v4BJf6a69H+uTytOEsTusT9ksd/1iWQ==
