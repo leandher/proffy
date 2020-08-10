@@ -4,6 +4,6 @@ export class GetTotalConnectionsUseCase {
   constructor(private connectionsRepository: IConnectionRepository) {}
 
   async execute(): Promise<number> {
-    return await this.connectionsRepository.getTotalConnections();
+    return this.connectionsRepository.getTotalConnections();
   }
 }

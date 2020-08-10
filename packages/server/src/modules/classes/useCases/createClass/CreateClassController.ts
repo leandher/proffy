@@ -5,7 +5,7 @@ import { CreateClassUseCase } from './CreateClassUseCase';
 export class CreateClassController {
   constructor(private createClassUseCase: CreateClassUseCase) {}
 
-  async handle(request: Request, response: Response) {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { user_id, subject, cost, schedule } = request.body;
 
     try {

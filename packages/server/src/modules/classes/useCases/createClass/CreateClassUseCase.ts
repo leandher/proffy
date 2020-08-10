@@ -8,7 +8,7 @@ import { ICreateClassDTO } from './ICreateClassDTO';
 export class CreateClassUseCase {
   constructor(private classRepository: IClassRepository) {}
 
-  async execute(data: ICreateClassDTO) {
+  async execute(data: ICreateClassDTO): Promise<void> {
     const { schedule, userId, cost, subject } = data;
 
     const classSchedule = schedule.map(

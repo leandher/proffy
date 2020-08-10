@@ -55,6 +55,7 @@ module.exports = {
     ],
     'no-underscore-dangle': 'off',
     '@typescript-eslint/camelcase': 'off',
+    'camelcase': 'off',
     'prettier/prettier': 'error',
     'class-methods-use-this': 'off',
     'import/extensions': [

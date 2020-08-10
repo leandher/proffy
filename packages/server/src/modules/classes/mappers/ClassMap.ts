@@ -8,7 +8,7 @@ import {
 
 import { Class } from '../domain/Class';
 
-interface ClassQuery extends Omit<ClassPersistence, 'user_id'> {
+interface IClassQuery extends Omit<ClassPersistence, 'user_id'> {
   user: UserPersistence;
   schedules: SchedulePersistence[];
 }
@@ -23,7 +23,7 @@ export class ClassMap {
     };
   }
 
-  public static toDomain(classPersistence: ClassQuery): Class {
+  public static toDomain(classPersistence: IClassQuery): Class {
     return {
       id: classPersistence.id,
       cost: classPersistence.cost,

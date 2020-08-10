@@ -5,7 +5,7 @@ import { FindClassesUseCase } from './FindClassesUseCase';
 export class FindClassesController {
   constructor(private findClassesUseCase: FindClassesUseCase) {}
 
-  async handle(request: Request, response: Response) {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { time, subject, week_day } = request.query;
 
     try {

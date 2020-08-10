@@ -3,7 +3,7 @@ import { IConnectionRepository } from '@modules/connections/repositories/IConnec
 export class CreateConnectionUseCase {
   constructor(private connectionsRepository: IConnectionRepository) {}
 
-  async execute(userId: number) {
+  async execute(userId: number): Promise<void> {
     await this.connectionsRepository.save(userId);
   }
 }
