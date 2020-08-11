@@ -14,6 +14,14 @@ export default class FakeUserRepository implements IUserRepository {
   }
 
   public async save(user: User): Promise<void> {
-    this.users.push({ ...user, id: Math.random() });
+    if (!user.id) {
+      this.users.push({ ...user, id: Math.random() });
+    } else {
+      const newUsersArray = this.users.filter((u) => u.id !== user.id);
+
+      newUsersArray.push(user);
+
+      this.users = [...newUsersArray];
+    }
   }
 }

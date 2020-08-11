@@ -15,6 +15,10 @@ export class User {
 
   public bio?: string;
 
+  public passwordResetToken?: string;
+
+  public passwordResetExpires?: Date;
+
   constructor(props: Omit<User, 'id'>, id?: number) {
     Object.assign(this, props);
     if (id) {

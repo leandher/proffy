@@ -9,9 +9,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@modules/*": ["./src/modules/*"],
-      "@infra/*": ["./src/infra/*"],
       "@config/*": ["./src/config/*"],
+      "@infra/*": ["./src/infra/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@providers/*": ["./src/providers/*"],
       "@utils/*": ["./src/utils/*"]
     }
   }
