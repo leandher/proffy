@@ -32,8 +32,6 @@ export class PrismaClassRepository implements IClassRepository {
 
     const classes = raw.map((rawClass) => ClassMap.toDomain(rawClass));
 
-    console.log(classes);
-
     return classes;
   }
 

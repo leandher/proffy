@@ -19,9 +19,13 @@ export class ForgotPasswordUseCase {
 
     const now = new Date();
 
-    now.setHours(now.getHours() + 1);
+    now.setHours(now.getHours() + 2);
 
-    this.userRepository.save({ ...user, passwordResetToken: token, passwordResetExpires: now });
+    await this.userRepository.save({
+      ...user,
+      passwordResetToken: token,
+      passwordResetExpires: now,
+    });
 
     const forgotPasswordTemplate = path.resolve(
       __dirname,
