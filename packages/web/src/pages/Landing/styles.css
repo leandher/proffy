@@ -1,6 +1,6 @@
 #page-landing {
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 1.6rem;
 
   display: flex;
   align-items: center;
@@ -37,10 +37,10 @@
 }
 
 .buttons-container a {
-  width: 30rem;
+  width: 28rem;
   height: 10.4rem;
   border-radius: 0.8rem;
-  font: 700 2.0rem Archivo;
+  font: 700 2rem Archivo;
 
   display: flex;
   align-items: center;
@@ -79,6 +79,25 @@
   margin-right: 2.4rem;
 }
 
+.welcome {
+  font-family: Poppins;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--color-title-in-primary);
+  text-align: left;
+
+  margin-top: 1.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome b {
+  font-weight: 700;
+}
+
 .total-connections {
   font-size: 1.4rem;
 
@@ -91,14 +110,60 @@
   margin-left: 0.8rem;
 }
 
+#page-landing-content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 10rem;
+  margin-top: 2.4rem;
+}
+
+#page-landing-content header .user-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page-landing-content header .user-information img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 1.6rem;
+}
+
+#page-landing-content header .user-information span {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: var(--color-text-in-primary);
+}
+
+#page-landing-content header .button {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+#page-landing-content header .button img {
+  width: 100%;
+}
+
 @media (min-width: 1100px) {
   #page-landing-content {
     max-width: 1100px;
 
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 350px 1fr;
-    grid-template-areas: "logo hero hero"  "buttons buttons total";
+    grid-template-columns: 1.5fr 1.5fr 1fr 2fr;
+    grid-template-rows: 1fr 450px 1fr;
+    grid-template-areas: 'header header header header' 'logo logo hero hero' 'welcome total buttons buttons';
+  }
+
+  #page-landing-content header {
+    grid-area: header;
+    margin-top: 1.6rem;
   }
 
   #page-landing-content .logo-container {
@@ -106,6 +171,7 @@
     align-self: center;
     text-align: left;
     margin: 0;
+    margin-bottom: 5.6rem;
   }
 
   .logo-container h2 {
@@ -124,7 +190,7 @@
 
   .buttons-container {
     grid-area: buttons;
-    justify-content: flex-start;
+    justify-self: end;
   }
 
   .buttons-container a {
@@ -133,6 +199,12 @@
 
   .total-connections {
     grid-area: total;
-    justify-self: end;
+    justify-content: flex-start;
+  }
+
+  .welcome {
+    grid-area: welcome;
+    justify-self: flex-start;
+    align-items: flex-start;
   }
 }
