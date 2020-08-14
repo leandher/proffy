@@ -24,10 +24,8 @@ interface AuthContextData {
 }
 
 interface LoginResponse {
-  resource: {
-    token: string;
-    user: User;
-  };
+  token: string;
+  user: User;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -46,8 +44,8 @@ export const AuthProvider: React.FC = ({ children }) => {
       });
       const { data } = response;
 
-      setUser(data.resource.user);
-      setToken(data.resource.token);
+      setUser(data.user);
+      setToken(data.token);
     } catch (error) {
       console.error(error.message);
     }
@@ -75,12 +73,14 @@ export const AuthProvider: React.FC = ({ children }) => {
           logout();
         }
         return Promise.reject(error);
-      },
+      }
     );
   });
 
   return (
-    <AuthContext.Provider value={{ signed: !!(user && token), user, isLoading, login, logout }}>
+    <AuthContext.Provider
+      value={{ signed: !!(user && token), user, isLoading, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
